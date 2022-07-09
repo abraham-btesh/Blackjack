@@ -1,5 +1,6 @@
 import Players
-import numpy
+import Dealer
+
 
 class Game:
     """
@@ -7,8 +8,7 @@ class Game:
     """
     def __init__(self, num_players):
         self.players = [Players.Player() for _ in range(num_players)]
-        self.dealer = Players.Dealer()
-
+        self.dealer = Dealer.Dealer()
 
     def play_round(self):
         """
