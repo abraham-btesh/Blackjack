@@ -16,7 +16,7 @@ class Player:
         self.hand = Hand.Hand(cards)
 
     def place_bet(self):
-        self.bet = self.money/6
+        self.bet = self.money/6 if self.money > 0 else 0
         self.money -= self.bet
         return self.bet
 
